@@ -1,0 +1,192 @@
+/* CSS (styles/Home.module.css) */
+
+.container {
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.header {
+  background: var(--bg-color-dark);
+  color: var(--text-color-dark);
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.header nav ul li a {
+  color: var(--text-color-dark);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.header nav ul li a:hover {
+  color: var(--primary-color-light);
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 1rem;
+  background: linear-gradient(135deg, var(--primary-color-light), #4caf50);
+  color: var(--text-color-light);
+  border-radius: 8px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.ctaButton {
+  background: var(--secondary-color-light);
+  color: var(--text-color-light);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.ctaButton:hover {
+  background: var(--secondary-color-dark);
+}
+
+.testimonials {
+  padding: 4rem 1rem;
+  background: var(--bg-color-light);
+  text-align: center;
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .testimonials {
+    background: #1e1e1e;
+  }
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.testimonial {
+  background: var(--bg-color-light);
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  .testimonial {
+    background: #2c2c2c;
+  }
+}
+
+.pricing {
+  padding: 4rem 1rem;
+  background: #e0f7fa;
+  text-align: center;
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .pricing {
+    background: #1e3a3a;
+  }
+}
+
+.pricing h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.plan {
+  background: var(--bg-color-light);
+  padding: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  display: inline-block;
+  width: calc(50% - 2rem);
+  margin: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .plan {
+    background: #2c2c2c;
+  }
+}
+
+.price {
+  font-size: 2rem;
+  color: var(--primary-color-light);
+  margin: 1rem 0;
+}
+
+.faq {
+  padding: 4rem 1rem;
+  background: var(--bg-color-light);
+  text-align: left;
+  border-radius: 8px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .faq {
+    background: #1e1e1e;
+  }
+}
+
+.faq h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.question {
+  background: var(--bg-color-light);
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .question {
+    background: #2c2c2c;
+  }
+}
+
+.footer {
+  background: var(--bg-color-dark);
+  color: var(--text-color-dark);
+  padding: 2rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.footer p {
+  margin: 0;
+}

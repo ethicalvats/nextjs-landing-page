@@ -1,101 +1,102 @@
-import Image from "next/image";
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <div className={styles.container}>
+      <Head>
+        <title>A Landing Page</title>
+        <meta name="description" content="A landing page" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Header />
+      <HeroSection />
+      <Testimonials />
+      <Pricing />
+      <FAQ />
+      <Footer />
     </div>
+  );
+}
+
+function Header() {
+  return (
+    <header className={styles.header}>
+      <nav>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+    </header>
+  );
+}
+
+function HeroSection() {
+  return (
+    <section id="hero" className={styles.hero}>
+      <h1>Welcome to Our Landing Page</h1>
+      <p>Discover the benefits of our product and how it can make your life easier.</p>
+      <button>Get Started</button>
+    </section>
+  );
+}
+
+function Testimonials() {
+  return (
+    <section id="testimonials" className={styles.testimonials}>
+      <h2>What Our Customers Say</h2>
+      <div className={styles.testimonial}>
+        <p>&quot;This product has changed my life for the better!&quot; - Happy Customer</p>
+      </div>
+      <div className={styles.testimonial}>
+        <p>&quot;Amazing results, I highly recommend it!&quot; - Satisfied User</p>
+      </div>
+    </section>
+  );
+}
+
+function Pricing() {
+  return (
+    <section id="pricing" className={styles.pricing}>
+      <h2>Pricing Plans</h2>
+      <div className={styles.plan}>
+        <h3>Basic Plan</h3>
+        <p>$9.99/month</p>
+        <p>Includes basic features.</p>
+      </div>
+      <div className={styles.plan}>
+        <h3>Pro Plan</h3>
+        <p>$19.99/month</p>
+        <p>Includes all features.</p>
+      </div>
+    </section>
+  );
+}
+
+function FAQ() {
+  return (
+    <section id="faq" className={styles.faq}>
+      <h2>Frequently Asked Questions</h2>
+      <div className={styles.question}>
+        <h3>What is this product about?</h3>
+        <p>This product helps you manage your tasks efficiently and increase productivity.</p>
+      </div>
+      <div className={styles.question}>
+        <h3>How can I get started?</h3>
+        <p>You can click on the &quot;Get Started&quot; button and sign up for a free trial.</p>
+      </div>
+    </section>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className={styles.footer}>
+      <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
   );
 }
